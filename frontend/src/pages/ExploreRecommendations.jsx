@@ -33,7 +33,7 @@ export default function ExploreRecommendations() {
   useEffect(() => {
     const fetchRecommendations = async () => {
       try {
-        const { data } = await axios.get("/api/recommendations", {
+        const { data } = await axios.get("https://scholarlink-cfsu.onrender.com/api/recommendations", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`,
           },
@@ -49,12 +49,13 @@ export default function ExploreRecommendations() {
     };
 
     // Check if profile is complete
-    if (!isProfileComplete(user)) {
-      // toast.info("Please complete your profile first!");
-      navigate("/user");
-    } else {
-      fetchRecommendations();
-    }
+    // if (!isProfileComplete(user)) {
+    //   // toast.info("Please complete your profile first!");
+    //   navigate("/user");
+    // } else {
+      
+    // }
+    fetchRecommendations();
   }, [user, navigate]);
 
   if (loading) {

@@ -24,7 +24,7 @@ export const UserContextProvider = ({ children }) => {
   const registerUser = async (formData, navigate) => {
     setLoading(true);
     try {
-      const { data } = await axios.post("/api/users/register", formData);
+      const { data } = await axios.post("https://scholarlink-cfsu.onrender.com/api/users/register", formData);
       toast.success("Registered successfully!");
       localStorage.setItem("authToken", data.token);
       setUser(data);
@@ -40,7 +40,7 @@ export const UserContextProvider = ({ children }) => {
   const loginUser = async (email, password, navigate) => {
     setLoading(true);
     try {
-      const { data } = await axios.post("/api/users/login", { email, password });
+      const { data } = await authAxios.post("https://scholarlink-cfsu.onrender.com/api/users/login", { email, password });
       toast.success("Logged in successfully!");
       localStorage.setItem("authToken", data.token);
       setUser(data);
@@ -58,7 +58,7 @@ export const UserContextProvider = ({ children }) => {
       const token = localStorage.getItem("authToken");
       if (!token) throw new Error("No token found");
 
-      const { data } = await authAxios.get("/api/users/profile");
+      const { data } = await authAxios.get("https://scholarlink-cfsu.onrender.com/api/users/profile");
       setUser({ ...data, token });
       setIsAuth(true);
       setIsAdmin(data.isAdmin || false); // <=== NEW
@@ -83,7 +83,7 @@ export const UserContextProvider = ({ children }) => {
 
   const updateUserProfile = async (updatedData) => {
     try {
-      const { data } = await authAxios.put("/api/users/profile", updatedData);
+      const { data } = await authAxios.put("https://scholarlink-cfsu.onrender.com/api/users/profile", updatedData);
       toast.success(data.message);
       setUser((prevUser) => ({ ...prevUser, ...data.user }));
     } catch (error) {

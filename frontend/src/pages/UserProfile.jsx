@@ -57,7 +57,7 @@ export default function UserProfile() {
         ...formData,
         specialAchievements: formData.specialAchievements.split(",").map((item) => item.trim()),
       };
-      await axios.put('/api/users/profile', payload, {
+      await axios.put('https://scholarlink-cfsu.onrender.com/api/users/profile', payload, {
   headers: {
     Authorization: `Bearer ${user.token}`
   }

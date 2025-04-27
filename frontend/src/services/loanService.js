@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "/api/loans";
+const API_URL = "https://scholarlink-cfsu.onrender.com/api/loans";
 
 // Get all loans
 export const getAllLoans = async () => {

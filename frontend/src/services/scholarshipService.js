@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "/api/scholarships";
+const API_URL = "https://scholarlink-cfsu.onrender.com/api/scholarships";
 
 export const getAllScholarships = async () => {
   const { data } = await axios.get(API_URL);
