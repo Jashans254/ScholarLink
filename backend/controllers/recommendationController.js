@@ -1,4 +1,4 @@
-import Scholarship from "../models/scholarship.js";
+import Scholarship from "../models/Scholarship.js";
 import Loan from "../models/Loan.js";
 import User from "../models/User.js";
 
