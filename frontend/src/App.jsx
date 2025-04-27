@@ -13,6 +13,10 @@ import Explore from "./pages/Explore";
 import VirtualAssistant from "./pages/VirtualAssistant";
 import UserProfile from "./pages/UserProfile";
 import ExploreRecommendations from "./pages/ExploreRecommendations";
+import QuestionListPage from "./pages/QuestionListPage";
+import AskQuestionPage from "./pages/AskQuestionPage";
+import QuestionDetailPage from "./pages/QuestionDetailPage";
+import EMICalculatorPage from "./pages/EMICalculatorPage";
 
 function App() {
   return (
@@ -34,8 +38,10 @@ function App() {
          <Route path="/user" element={<UserProfile/>} />
          <Route path="/explore-recommendations" element={<ExploreRecommendations />} />
 
-
-
+         <Route path="/questions" element={<QuestionListPage />} />
+<Route path="/ask" element={<AskQuestionPage />} />
+<Route path="/questions/:id" element={<QuestionDetailPage />} />
+<Route path="/emi" element={<EMICalculatorPage/>} />
 
         </Routes>
         <Footer />
