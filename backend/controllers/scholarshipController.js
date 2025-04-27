@@ -1,5 +1,5 @@
 import asyncHandler from "express-async-handler";
-import Scholarship from "../models/scholarship.js";
+import Scholarship from "../models/Scholarship.js";
 
 // @desc    Create a new scholarship
 // @route   POST /api/scholarships
