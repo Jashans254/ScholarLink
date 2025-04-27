@@ -34,18 +34,5 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-import path from 'path';
-import { fileURLToPath } from 'url';
 
-// These two lines help in ESM modules (if you use import/export)
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
-// Serve frontend static files
-const frontendBuildPath = path.join(__dirname, '..', 'frontend', 'build');
-app.use(express.static(frontendBuildPath));
-
-// For any unknown routes, send back index.html (React Router support)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(frontendBuildPath, 'index.html'));
-});

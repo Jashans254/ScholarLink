@@ -50,8 +50,8 @@ export default function ExploreRecommendations() {
 
     // Check if profile is complete
     if (!isProfileComplete(user)) {
-      toast.info("Please complete your profile first!");
-      navigate("/update-profile");
+      // toast.info("Please complete your profile first!");
+      navigate("/user");
     } else {
       fetchRecommendations();
     }
