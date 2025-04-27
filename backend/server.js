@@ -25,6 +25,9 @@ app.use("/api/loans", loanRoutes);
 app.use("/api/recommendations", recommendationRoutes);
 
 app.use("/api/chat",askRoutes)
+import qaRoutes from "./routes/qaRoutes.js";
+
+app.use("/api/qa", qaRoutes);
 
 // Error Handling Middleware
 // app.use(notFound);
