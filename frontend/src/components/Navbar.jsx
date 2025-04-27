@@ -8,7 +8,7 @@ export default function Navbar() {
     <nav className="bg-white fixed w-full top-0 left-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center py-2 px-4 sm:px-6">
 
-        {/* Logo */}
+        {/* Logo d*/}
         <Link 
           to="/" 
           className="text-xl sm:text-3xl font-extrabold flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-transform hover:scale-105"
