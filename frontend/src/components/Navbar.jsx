@@ -15,7 +15,7 @@ export default function Navbar() {
           to="/" 
           className="text-xl sm:text-3xl font-extrabold flex items-center space-x-2 text-white hover:text-yellow-200 transition-transform hover:scale-105"
         >
-          <span>ScholarPath</span>
+          <span>ScholarLink</span>
           <svg 
             className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-400" 
             xmlns="http://www.w3.org/2000/svg" 
